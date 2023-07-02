@@ -7,8 +7,8 @@ import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class Book extends BaseEntity<Long> {
-    @Min(value = 50)
-    @Max(value = 5000)
+//    @Min(value = 50)
+//    @Max(value = 5000)
     private double price;
     @Transient
     private double discount;

@@ -24,7 +24,7 @@ public class AuthorController {
     private AuthorService authorService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<Author> findById(@PathVariable("id") @Min(value = 1) @Max(value = 100) Long id) {
+    public ResponseEntity<Author> findById(@PathVariable("id") @Min(value = 1) Long id) {
         Author result = authorService.findById(id);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }

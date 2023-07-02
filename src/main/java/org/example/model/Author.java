@@ -10,10 +10,10 @@ import org.example.validator.IpAddress;
 @Entity
 public class Author extends BaseEntity<Long> {
 
-    @NotBlank
+//    @NotBlank
     @Email
     private String email;
-    @NotNull
+//    @NotNull
     @IpAddress(message = "Not Valid IP Address")
     private String ipAddress;
     public Author() {

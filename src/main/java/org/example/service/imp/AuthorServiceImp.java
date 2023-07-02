@@ -6,6 +6,8 @@ import org.example.error.NotAcceptableException;
 import org.example.error.NotFoundException;
 import org.example.model.Author;
 import org.example.service.AuthorService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,8 @@ public class AuthorServiceImp extends BaseServiceImp<Author, Long> implements Au
 
     @Autowired
     private BaseRepo<Author, Long> baseRepo;
+
+    Logger logger = LoggerFactory.getLogger(AuthorServiceImp.class);
 
     @Override
     public Author update(Long id, Author author) {
